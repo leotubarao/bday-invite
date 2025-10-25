@@ -39,7 +39,7 @@ jobs:
         run: pnpm run build
         env:
           NODE_ENV: production
-          VITE_PHONE_NUMBER: ${{ env.VITE_PHONE_NUMBER }}
+          VITE_PHONE_NUMBER: ${{ vars.VITE_PHONE_NUMBER }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
