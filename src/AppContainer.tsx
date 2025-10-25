@@ -29,8 +29,8 @@ export default function AppContainer() {
       <div className="animate-fade-in-up relative z-10 w-full max-w-4xl rounded-3xl border border-slate-700/50 bg-slate-800/40 p-8 shadow-2xl backdrop-blur-lg md:p-12">
         {/* Título */}
         <div className="mb-8 text-center">
-          <h1 className="animate-pulse-slow mb-4 text-5xl font-bold text-white md:text-5xl">
-            🎉 IT'S MY BIRTHDAY! 🎉
+          <h1 className="animate-pulse-slow mb-4 flex items-center justify-center gap-2 text-3xl font-bold text-white md:gap-4 md:text-5xl">
+            🎉 <span>IT'S MY BIRTHDAY!</span> 🎉
           </h1>
           <p className="animate-fade-in text-xl text-slate-200 md:text-2xl">
             E você está convidado(a) para celebrar comigo!
@@ -40,7 +40,7 @@ export default function AppContainer() {
         {/* Data do Evento */}
         <div className="animate-fade-in-delayed mb-8 text-center">
           <div className="mb-6 inline-block rounded-2xl border border-amber-400/50 bg-gradient-to-r from-amber-500/20 to-orange-500/20 px-8 py-4 backdrop-blur-sm">
-            <p className="text-2xl font-bold text-amber-200 md:text-3xl">
+            <p className="text-xl font-bold text-amber-200 md:text-3xl">
               📅 01 de Novembro - Sábado
             </p>
           </div>
