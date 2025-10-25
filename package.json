@@ -1,6 +1,6 @@
 {
-  "name": "ltco-vite-boilerplate",
-  "description": "A Vite + React + TypeScript boilerplate",
+  "name": "bday-invite",
+  "description": "A birthday invitation website built for friends and family.",
   "version": "1.0.0",
   "author": {
     "name": "Leoni Santos",
