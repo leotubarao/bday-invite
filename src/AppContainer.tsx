@@ -37,6 +37,15 @@ export default function AppContainer() {
           </p>
         </div>
 
+        {/* Data do Evento */}
+        <div className="animate-fade-in-delayed mb-8 text-center">
+          <div className="mb-6 inline-block rounded-2xl border border-amber-400/50 bg-gradient-to-r from-amber-500/20 to-orange-500/20 px-8 py-4 backdrop-blur-sm">
+            <p className="text-2xl font-bold text-amber-200 md:text-3xl">
+              📅 01 de Novembro - Sábado
+            </p>
+          </div>
+        </div>
+
         {/* Descrição */}
         <div className="animate-fade-in-delayed mb-10 text-center">
           <p className="text-lg leading-relaxed text-slate-300">
