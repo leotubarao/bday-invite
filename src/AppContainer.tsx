@@ -49,13 +49,16 @@ export default function AppContainer() {
         {/* Descrição */}
         <div className="animate-fade-in-delayed mb-10 text-center">
           <p className="text-lg leading-relaxed text-slate-300">
-            Preparei algo especial para comemorar mais um ano de vida! 🥳
+            Estou completando mais um ano e quero celebrar com você! 🥳
             <br />
-            Serão <span className="font-bold text-white">DOIS EVENTOS</span> no
-            mesmo dia e eu vou estar presente nos dois!
+            Preparei{' '}
+            <span className="font-bold text-white">
+              DOIS MOMENTOS ESPECIAIS
+            </span>{' '}
+            no mesmo dia para a gente se divertir!
             <br />
-            Escolha onde você quer aparecer (ou melhor ainda, venha nos dois!
-            😄)
+            Escolha qual combina mais com você, ou ainda melhor: vem nos dois!
+            😄
           </p>
         </div>
 
