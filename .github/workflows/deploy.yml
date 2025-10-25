@@ -35,11 +35,26 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Validate environment variables
+        env:
+          VITE_PHONE_NUMBER: ${{ secrets.VITE_PHONE_NUMBER }}
+        run: |
+          echo "Checking if VITE_PHONE_NUMBER is configured..."
+          if [ -z "$VITE_PHONE_NUMBER" ]; then
+            echo "❌ ERROR: VITE_PHONE_NUMBER environment variable is not set!"
+            echo "Please configure the VITE_PHONE_NUMBER secret in repository settings."
+            exit 1
+          fi
+          echo "✅ VITE_PHONE_NUMBER is properly configured"
+          echo "Environment variables starting with VITE_:"
+          env | grep VITE_
+
       - name: Build with Vite
         run: pnpm run build
         env:
+          ACTIONS_STEP_DEBUG: true
           NODE_ENV: production
-          VITE_PHONE_NUMBER: ${{ vars.VITE_PHONE_NUMBER }}
+          VITE_PHONE_NUMBER: ${{ secrets.VITE_PHONE_NUMBER }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
