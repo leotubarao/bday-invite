@@ -58,7 +58,7 @@ export default function AppContainer() {
             Estou completando mais um ano no dia mais assombrado do ano! 🎃👻
             <br />
             Preparei{' '}
-            <span className="font-bold text-white">
+            <span className="font-bold text-orange-300">
               DOIS MOMENTOS ESPECIAIS
             </span>{' '}
             no mesmo dia para celebrarmos juntos!
