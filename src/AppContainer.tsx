@@ -29,10 +29,10 @@ export default function AppContainer() {
       <div className="animate-fade-in-up relative z-10 w-full max-w-4xl rounded-xl border border-slate-700/50 bg-slate-800/40 p-8 shadow-2xl backdrop-blur-lg md:p-12">
         {/* Título */}
         <div className="mb-8 text-center">
-          <h1 className="animate-pulse-slow mb-4 flex items-center justify-center gap-2 text-3xl font-bold text-white md:gap-4 md:text-5xl">
+          <h1 className="animate-pulse-slow mb-4 flex items-center justify-center gap-2 text-3xl font-bold text-orange-200 md:gap-4 md:text-5xl">
             🎃 <span>SPOOKY BIRTHDAY PARTY!</span> 🎃
           </h1>
-          <p className="animate-fade-in text-xl text-slate-200 md:text-2xl">
+          <p className="animate-fade-in text-xl text-orange-200 md:text-2xl">
             E você está convidado(a) para celebrar comigo! 👻
           </p>
         </div>
@@ -141,7 +141,7 @@ export default function AppContainer() {
             </button>
             <button
               onClick={() => handlePollResponse('Vou nos 2 eventos!')}
-              className="transform rounded-lg bg-gradient-to-r from-emerald-500 to-teal-500 px-6 py-4 font-bold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:from-emerald-600 hover:to-teal-600 hover:shadow-xl"
+              className="transform rounded-lg bg-gradient-to-r from-emerald-600 to-teal-600 px-6 py-4 font-bold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:from-emerald-600 hover:to-teal-600 hover:shadow-xl"
             >
               ✨ Vou nos 2
             </button>
