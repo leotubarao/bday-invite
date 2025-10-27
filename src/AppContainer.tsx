@@ -131,7 +131,7 @@ export default function AppContainer() {
           <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
             <button
               onClick={() =>
-                handlePollResponse('Estarei no Pirajú Botequim às 12h! 🍺🎃')
+                handlePollResponse('Estarei no Pirajú Botequim às 12h!')
               }
               className="transform cursor-pointer rounded-xl bg-gradient-to-r from-orange-600 to-orange-500 px-6 py-4 font-bold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:from-orange-700 hover:to-orange-600 hover:shadow-xl"
             >
@@ -139,9 +139,7 @@ export default function AppContainer() {
             </button>
             <button
               onClick={() =>
-                handlePollResponse(
-                  'Não vou poder ir... a bruxa me prendeu! 🧙‍♀️💔'
-                )
+                handlePollResponse('Não vou poder ir... a bruxa me prendeu!')
               }
               className="transform cursor-pointer rounded-xl bg-gradient-to-r from-gray-600 to-gray-700 px-6 py-4 font-bold text-white shadow-lg transition-all duration-200 hover:scale-105 hover:from-gray-700 hover:to-gray-800 hover:shadow-xl"
             >
