@@ -145,3 +145,7 @@
 .animate-bounce-spooky {
   animation: bounce-spooky 2s infinite;
 }
+
+.animate-delay-500 {
+  animation-delay: 0.5s;
+}
