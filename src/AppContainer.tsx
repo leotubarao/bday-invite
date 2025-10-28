@@ -3,6 +3,7 @@ import EventDate from './components/EventDate'
 import EventDescription from './components/EventDescription'
 import VenueCard from './components/VenueCard'
 import RSVPSection from './components/RSVPSection'
+import WeatherTimeline from './components/WeatherTimeline'
 
 export default function AppContainer() {
   return (
@@ -24,12 +25,7 @@ export default function AppContainer() {
 
         <RSVPSection />
 
-        {/* Footer */}
-        <div className="animate-fade-in mt-8 text-center text-sm text-orange-300">
-          <p>
-            Clique no botão da enquete e me mande uma mensagem no WhatsApp! 🔮💬
-          </p>
-        </div>
+        <WeatherTimeline />
       </div>
     </div>
   )
