@@ -8,10 +8,13 @@ Este projeto foi criado para servir como um convite digital personalizado para c
 
 ### ✨ Funcionalidades
 
-- **Múltiplos Eventos**: Suporte para dois eventos no mesmo dia (ex: almoço e festa)
-- **Cópia de Endereços**: Botões para copiar endereços dos eventos para facilitar a navegação
-- **Enquete Interativa**: Sistema de votação para confirmar presença nos eventos
+- **Evento Único**: Convite para celebração no Pirajú Botequim
+- **Previsão do Tempo**: Integração com Weather API do Google para mostrar o clima no dia do evento (12h-21h)
+- **Cópia de Endereço**: Botão para copiar endereço do evento
+- **Integração Instagram**: Link direto para o perfil do local
+- **Enquete Interativa**: Sistema de votação para confirmar presença
 - **Integração WhatsApp**: Envio automático de respostas via WhatsApp
+- **Tema Halloween**: Design festivo com cores e animações temáticas
 - **Design Responsivo**: Interface adaptável para desktop e mobile
 - **Animações Suaves**: Elementos animados para uma experiência mais envolvente
 
@@ -21,9 +24,12 @@ Este projeto foi criado para servir como um convite digital personalizado para c
 - **[TypeScript](https://www.typescriptlang.org/)** - Tipagem estática para JavaScript
 - **[Vite](https://vitejs.dev/)** - Build tool moderna e rápida
 - **[Tailwind CSS](https://tailwindcss.com/)** - Framework CSS utilitário
+- **[Axios](https://axios-http.com/)** - Cliente HTTP para integração com APIs
+- **[Google Cloud Geocoding API](https://developers.google.com/maps/documentation/geocoding)** - API de geocodificação
+- **[Open-Meteo API](https://open-meteo.com/)** - API de previsão do tempo (gratuita)
 - **[pnpm](https://pnpm.io/)** - Gerenciador de pacotes eficiente
 
-## � Como Usar
+## 🚀 Como Usar
 
 ### Pré-requisitos
 
@@ -48,10 +54,23 @@ npm install
 1. Crie um arquivo `.env` na raiz do projeto:
 
 ```bash
+# Google Cloud API (obrigatório para funcionalidade do clima)
+VITE_GOOGLE_API_KEY=your_google_cloud_api_key_here
+
+# WhatsApp (obrigatório para funcionalidade de enquete)
 VITE_PHONE_NUMBER=5519999999999
 ```
 
-2. Substitua pelo seu número de WhatsApp (com código do país, sem símbolos)
+2. **Configuração do Google Cloud API (Obrigatório)**:
+   - Acesse [Google Cloud Console](https://console.cloud.google.com/)
+   - Crie um novo projeto ou selecione um existente
+   - Ative a **Geocoding API**
+   - Vá em "Credenciais" e crie uma chave de API
+   - Adicione a chave no arquivo `.env`
+   - O sistema usará Open-Meteo (gratuito) para dados meteorológicos
+
+3. **Configuração do WhatsApp (Obrigatório)**:
+   - Substitua pelo seu número de WhatsApp (com código do país, sem símbolos)
 
 ### Desenvolvimento
 
@@ -91,14 +110,28 @@ npm run deploy
 
 ## 🎨 Personalização
 
-### Modificando os Eventos
+### Modificando o Evento
 
-Edite o arquivo `src/AppContainer.tsx` para personalizar:
+Edite os arquivos de componentes para personalizar:
 
-- **Endereços**: Altere as variáveis `barAddress` e `ameAddress`
-- **Horários**: Modifique os textos dos horários nos cards dos eventos
-- **Nomes dos Locais**: Atualize os títulos dos eventos
-- **Emojis e Cores**: Personalize os ícones e gradientes dos botões
+- **VenueCard**: Altere `src/components/VenueCard.tsx` para modificar local, endereço e Instagram
+- **EventDate**: Modifique `src/components/EventDate.tsx` para alterar data e horário
+- **WeatherTimeline**: Atualize `src/services/weatherService.ts` para alterar localização
+- **Tema**: Personalize cores e animações em `src/styles/index.css`
+- **Scrollbars**: Estilos customizados temáticos em `src/styles/index.css`
+
+### Customizando Scrollbars
+
+O projeto inclui scrollbars customizados com tema Halloween:
+
+- **Design Simples**: Estilo laranja minimalista
+- **Responsivo**: Scrollbars adaptadas para dispositivos móveis
+- **Acessibilidade**: Suporte para high contrast e reduced motion
+- **Smooth Scrolling**: Rolagem suave em toda a aplicação
+
+Classes CSS disponíveis:
+
+- `.weather-timeline-scroll`: Para containers horizontais com scrollbar temática
 
 ### Customizando Mensagens
 
@@ -106,9 +139,18 @@ As mensagens de resposta da enquete podem ser editadas na função `handlePollRe
 
 ## 📱 Funcionalidades Específicas
 
-### Sistema de Cópia de Endereços
+### Previsão do Tempo com Google Cloud
 
-- Clique nos botões "📋 Copiar Endereço" para copiar automaticamente o endereço para a área de transferência
+- Integração com Google Cloud Geocoding API para coordenadas precisas
+- Uso do Open-Meteo (gratuito) para dados meteorológicos confiáveis
+- Exibe previsão das 12h às 21h do dia do evento
+- Dados em português com ícones visuais para diferentes condições
+- Informações de temperatura, umidade e velocidade do vento
+- **Requer Google Cloud API key** para funcionar
+
+### Sistema de Cópia de Endereço
+
+- Clique no botão "📋 Copiar Endereço" para copiar automaticamente o endereço
 - Feedback visual com confirmação "✓ Copiado!" por 2 segundos
 
 ### Integração WhatsApp
@@ -116,21 +158,23 @@ As mensagens de resposta da enquete podem ser editadas na função `handlePollRe
 - Após votar na enquete, abre automaticamente o WhatsApp com mensagem pré-definida
 - Facilita o processo de confirmação de presença
 
-### Animações CSS
+### Tema Halloween Interativo
 
-- Elementos flutuantes com animações suaves
-- Efeitos de fade-in e slide-in para melhor experiência do usuário
-- Hover effects em todos os elementos interativos
+- Cores temáticas em laranja, roxo e preto
+- Animações flutuantes com elementos decorativos
+- Efeitos de brilho e movimento para criar atmosfera festiva
+- Emojis temáticos em toda a interface
 
 ## 🎯 Casos de Uso
 
 Este projeto é ideal para:
 
-- Convites de aniversário digitais
-- Celebrações com múltiplos eventos
+- Convites de aniversário temáticos (Halloween, etc.)
+- Celebrações com informações climáticas relevantes
+- Eventos em locais específicos com redes sociais
 - Coleta de confirmações de presença
 - Eventos familiares e entre amigos
-- Substituição de convites em papel por versões eco-friendly
+- Substituição de convites em papel por versões eco-friendly e interativas
 
 ## 📄 Licença
 
